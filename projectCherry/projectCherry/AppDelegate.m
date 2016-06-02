@@ -15,7 +15,7 @@
 
 @implementation AppDelegate
 
-//hey buddy!!
+//hey buddy!
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
