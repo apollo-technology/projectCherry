@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6La-99-du5">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,7 +20,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="initial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRf-4I-xGv">
                                 <rect key="frame" x="141" y="99" width="40" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -62,10 +62,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="DS8-w6-EGY" kind="relationship" relationship="viewControllers" id="gG1-zb-uqz"/>
                         <segue destination="aPu-eK-RG4" kind="relationship" relationship="viewControllers" id="g0E-BP-dpw"/>
                         <segue destination="NBz-9h-s7b" kind="relationship" relationship="viewControllers" id="JJy-87-hJU"/>
                         <segue destination="lkt-uQ-Tim" kind="relationship" relationship="viewControllers" id="5U3-3K-QsD"/>
+                        <segue destination="DS8-w6-EGY" kind="relationship" relationship="viewControllers" id="gG1-zb-uqz"/>
                         <segue destination="UMG-Nh-Iu3" kind="relationship" relationship="viewControllers" id="MIq-EA-jyV"/>
                     </connections>
                 </tabBarController>
@@ -221,7 +221,7 @@
         <scene sceneID="EuJ-kQ-LF1">
             <objects>
                 <navigationController title="Search" automaticallyAdjustsScrollViewInsets="NO" id="DS8-w6-EGY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="2st-YV-hbE"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="2st-YV-hbE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JFz-aw-DaS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -342,7 +342,7 @@
             </objects>
             <point key="canvasLocation" x="3120" y="1302"/>
         </scene>
-        <!--View Controller-->
+        <!--Map-->
         <scene sceneID="p3R-t8-dxS">
             <objects>
                 <viewController id="er1-dD-Dwl" sceneMemberID="viewController">
@@ -353,9 +353,20 @@
                     <view key="view" contentMode="scaleToFill" id="CS7-9n-oLn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-1t-IMn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="c0B-1t-IMn" secondAttribute="bottom" id="SsC-CJ-Imm"/>
+                            <constraint firstItem="c0B-1t-IMn" firstAttribute="top" secondItem="CS7-9n-oLn" secondAttribute="top" id="VDS-re-2ti"/>
+                            <constraint firstAttribute="trailing" secondItem="c0B-1t-IMn" secondAttribute="trailing" id="aGL-it-bXy"/>
+                            <constraint firstItem="c0B-1t-IMn" firstAttribute="leading" secondItem="CS7-9n-oLn" secondAttribute="leading" id="vi9-Yd-zWG"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="EK6-be-UXb"/>
+                    <navigationItem key="navigationItem" title="Map" id="EK6-be-UXb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUh-fP-jSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -365,7 +376,7 @@
         <scene sceneID="c36-h0-1KN">
             <objects>
                 <navigationController title="Map" automaticallyAdjustsScrollViewInsets="NO" id="aPu-eK-RG4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Pu9-Xr-2FX"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="Pu9-Xr-2FX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="biW-v5-izU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -384,7 +395,7 @@
         <scene sceneID="LCl-2J-DYH">
             <objects>
                 <navigationController title="Location List" automaticallyAdjustsScrollViewInsets="NO" id="NBz-9h-s7b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="NKK-LV-NOr"/>
+                    <tabBarItem key="tabBarItem" title="Locations" id="NKK-LV-NOr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="16X-ea-O9X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -403,7 +414,7 @@
         <scene sceneID="Y35-Le-2KN">
             <objects>
                 <navigationController title="Events" automaticallyAdjustsScrollViewInsets="NO" id="lkt-uQ-Tim" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LWC-Iw-1Hl"/>
+                    <tabBarItem key="tabBarItem" title="Events" id="LWC-Iw-1Hl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EtN-nn-KYh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -418,11 +429,11 @@
             </objects>
             <point key="canvasLocation" x="1650" y="186"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="H5I-PQ-oiO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UMG-Nh-Iu3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="PMI-vr-z0f"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="PMI-vr-z0f"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qxe-mw-bBo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

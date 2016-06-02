@@ -15,6 +15,8 @@
 
 @implementation AppDelegate
 
+//hey buddy!
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -23,10 +25,20 @@
         configuration.applicationId = @"fSZ6FAXqCKtpGNBT3DZBkdNPbxX4OeOu4K3dBE0L";
         configuration.clientKey = @"uN06yHaHLKHSyBk3aMJheuv6jXmD4FTiStNQPwjm";
         configuration.server = @"https://parseapi.back4app.com";
-        
-        
-        //wefiouhwefiouhjwefoijfewoijwefoij
     }]];
+    
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    [locationManager requestWhenInUseAuthorization];
+    
+    NSDictionary *navTitleAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont fontWithName:@"CaviarDreams-Bold" size:22], NSFontAttributeName,nil];
+    
+    NSDictionary *tabNTitleAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor grayColor], NSForegroundColorAttributeName,[UIFont fontWithName:@"CaviarDreams-Bold" size:8], NSFontAttributeName,nil];
+    
+    NSDictionary *tabSTitleAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.000 green:0.478 blue:1.000 alpha:1.00], NSForegroundColorAttributeName,[UIFont fontWithName:@"CaviarDreams-Bold" size:8], NSFontAttributeName,nil];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:tabNTitleAttributes forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:tabSTitleAttributes forState:UIControlStateSelected];
+    [[UINavigationBar appearance] setTitleTextAttributes:navTitleAttributes];
     
     return YES;
 }

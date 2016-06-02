@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E5CF4AA1D00A58C0026B6E4 /* CaviarDreams-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5CF4A61D00A58C0026B6E4 /* CaviarDreams-Bold.ttf */; };
+		1E5CF4AB1D00A58C0026B6E4 /* CaviarDreams-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5CF4A71D00A58C0026B6E4 /* CaviarDreams-BoldItalic.ttf */; };
+		1E5CF4AC1D00A58C0026B6E4 /* CaviarDreams-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5CF4A81D00A58C0026B6E4 /* CaviarDreams-Italic.ttf */; };
+		1E5CF4AD1D00A58C0026B6E4 /* CaviarDreams-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5CF4A91D00A58C0026B6E4 /* CaviarDreams-Regular.ttf */; };
 		1EB050CB1CFF7E4B0095254C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB050CA1CFF7E4B0095254C /* main.m */; };
 		1EB050CE1CFF7E4B0095254C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB050CD1CFF7E4B0095254C /* AppDelegate.m */; };
 		1EB050D11CFF7E4B0095254C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB050D01CFF7E4B0095254C /* ViewController.m */; };
@@ -53,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E5CF4A61D00A58C0026B6E4 /* CaviarDreams-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CaviarDreams-Bold.ttf"; sourceTree = "<group>"; };
+		1E5CF4A71D00A58C0026B6E4 /* CaviarDreams-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CaviarDreams-BoldItalic.ttf"; sourceTree = "<group>"; };
+		1E5CF4A81D00A58C0026B6E4 /* CaviarDreams-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CaviarDreams-Italic.ttf"; sourceTree = "<group>"; };
+		1E5CF4A91D00A58C0026B6E4 /* CaviarDreams-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CaviarDreams-Regular.ttf"; sourceTree = "<group>"; };
 		1EB050C61CFF7E4B0095254C /* projectCherry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectCherry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB050CA1CFF7E4B0095254C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1EB050CC1CFF7E4B0095254C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -189,6 +197,10 @@
 		1EB050C91CFF7E4B0095254C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1E5CF4A61D00A58C0026B6E4 /* CaviarDreams-Bold.ttf */,
+				1E5CF4A71D00A58C0026B6E4 /* CaviarDreams-BoldItalic.ttf */,
+				1E5CF4A81D00A58C0026B6E4 /* CaviarDreams-Italic.ttf */,
+				1E5CF4A91D00A58C0026B6E4 /* CaviarDreams-Regular.ttf */,
 				1EB050CA1CFF7E4B0095254C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -318,6 +330,10 @@
 				1EDF362E1D009857005930F8 /* Main.storyboard in Resources */,
 				1EB050D91CFF7E4B0095254C /* LaunchScreen.storyboard in Resources */,
 				1EB050D61CFF7E4B0095254C /* Assets.xcassets in Resources */,
+				1E5CF4AD1D00A58C0026B6E4 /* CaviarDreams-Regular.ttf in Resources */,
+				1E5CF4AB1D00A58C0026B6E4 /* CaviarDreams-BoldItalic.ttf in Resources */,
+				1E5CF4AC1D00A58C0026B6E4 /* CaviarDreams-Italic.ttf in Resources */,
+				1E5CF4AA1D00A58C0026B6E4 /* CaviarDreams-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
