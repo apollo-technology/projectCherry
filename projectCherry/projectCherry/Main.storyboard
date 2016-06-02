@@ -4,34 +4,15 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Raleway-Bold.ttf">
+            <string>Raleway-Bold</string>
+        </mutableArray>
+        <mutableArray key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--Initial View Controller-->
-        <scene sceneID="vve-5D-ixu">
-            <objects>
-                <viewController id="QcG-LN-hkc" customClass="InitialViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ouP-wi-Qzi"/>
-                        <viewControllerLayoutGuide type="bottom" id="95Z-l1-th2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Hdz-U9-t6H">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="initial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRf-4I-xGv">
-                                <rect key="frame" x="141" y="99" width="40" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="19K-qI-riF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="774" y="475"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="Kcq-kW-0xA">
             <objects>
@@ -221,7 +202,7 @@
         <scene sceneID="EuJ-kQ-LF1">
             <objects>
                 <navigationController title="Search" automaticallyAdjustsScrollViewInsets="NO" id="DS8-w6-EGY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="2st-YV-hbE"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="2st-YV-hbE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JFz-aw-DaS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -345,7 +326,7 @@
         <!--Map-->
         <scene sceneID="p3R-t8-dxS">
             <objects>
-                <viewController id="er1-dD-Dwl" sceneMemberID="viewController">
+                <viewController id="er1-dD-Dwl" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nBC-Bt-TVr"/>
                         <viewControllerLayoutGuide type="bottom" id="Bdy-Xu-09h"/>
@@ -356,6 +337,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-1t-IMn">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <connections>
+                                    <outlet property="delegate" destination="er1-dD-Dwl" id="LwN-sP-dfO"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -366,7 +350,16 @@
                             <constraint firstItem="c0B-1t-IMn" firstAttribute="leading" secondItem="CS7-9n-oLn" secondAttribute="leading" id="vi9-Yd-zWG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="EK6-be-UXb"/>
+                    <navigationItem key="navigationItem" title="Map" id="EK6-be-UXb">
+                        <barButtonItem key="rightBarButtonItem" image="filterIcon" id="JgC-Ro-lRU">
+                            <connections>
+                                <action selector="filterView:" destination="er1-dD-Dwl" id="diP-ZH-Dsr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="c0B-1t-IMn" id="WjU-9G-j0u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUh-fP-jSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,7 +369,7 @@
         <scene sceneID="c36-h0-1KN">
             <objects>
                 <navigationController title="Map" automaticallyAdjustsScrollViewInsets="NO" id="aPu-eK-RG4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="Pu9-Xr-2FX"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="mapTabIcon" id="Pu9-Xr-2FX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="biW-v5-izU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -395,7 +388,7 @@
         <scene sceneID="LCl-2J-DYH">
             <objects>
                 <navigationController title="Location List" automaticallyAdjustsScrollViewInsets="NO" id="NBz-9h-s7b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Locations" id="NKK-LV-NOr"/>
+                    <tabBarItem key="tabBarItem" title="Locations" image="locationTabIcon" id="NKK-LV-NOr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="16X-ea-O9X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -414,7 +407,7 @@
         <scene sceneID="Y35-Le-2KN">
             <objects>
                 <navigationController title="Events" automaticallyAdjustsScrollViewInsets="NO" id="lkt-uQ-Tim" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" id="LWC-Iw-1Hl"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="eventTabIcon" id="LWC-Iw-1Hl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EtN-nn-KYh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -448,5 +441,90 @@
             </objects>
             <point key="canvasLocation" x="1640" y="1302"/>
         </scene>
+        <!--Map Filter View-->
+        <scene sceneID="3pe-9r-FrC">
+            <objects>
+                <viewController storyboardIdentifier="mapFilterView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2v1-v0-lQu" customClass="MapFilterView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Mf-pv-rj4"/>
+                        <viewControllerLayoutGuide type="bottom" id="zDh-8m-Yrw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ips-YB-cRV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYw-HP-R8b">
+                                <rect key="frame" x="24" y="95" width="272" height="289"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqE-Ds-yNp">
+                                        <rect key="frame" x="91" y="239" width="90" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
+                                        <state key="normal" title="Update">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="done:" destination="2v1-v0-lQu" eventType="touchUpInside" id="0CR-wP-hlJ"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YSB-C1-140">
+                                        <rect key="frame" x="8" y="76" width="256" height="155"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Egr-9D-NgV">
+                                                <rect key="frame" x="0.0" y="28" width="256" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Egr-9D-NgV" id="F2L-d9-tJS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="256" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="2v1-v0-lQu" id="usF-3F-SBj"/>
+                                            <outlet property="delegate" destination="2v1-v0-lQu" id="J94-td-mnn"/>
+                                        </connections>
+                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Display:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnn-H0-6lI">
+                                        <rect key="frame" x="8" y="20" width="256" height="48"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="32"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="272" id="MZV-aw-Hq9"/>
+                                    <constraint firstAttribute="height" constant="289" id="aoi-10-9MO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eYw-HP-R8b" firstAttribute="centerY" secondItem="Ips-YB-cRV" secondAttribute="centerY" id="MQD-GR-bHM"/>
+                            <constraint firstItem="eYw-HP-R8b" firstAttribute="centerX" secondItem="Ips-YB-cRV" secondAttribute="centerX" id="Qal-YE-EnO"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="cardView" destination="eYw-HP-R8b" id="nuM-hN-hXN"/>
+                        <outlet property="pickerTable" destination="YSB-C1-140" id="4XN-ak-eai"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dz2-zg-r5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2382" y="-939"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="eventTabIcon" width="30" height="30"/>
+        <image name="filterIcon" width="20" height="20"/>
+        <image name="locationTabIcon" width="30" height="30"/>
+        <image name="mapTabIcon" width="30" height="30"/>
+    </resources>
 </document>

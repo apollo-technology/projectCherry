@@ -27,14 +27,11 @@
         configuration.server = @"https://parseapi.back4app.com";
     }]];
     
-    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-    [locationManager requestWhenInUseAuthorization];
+    NSDictionary *navTitleAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont fontWithName:@"Raleway-Bold" size:22], NSFontAttributeName,nil];
     
-    NSDictionary *navTitleAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont fontWithName:@"CaviarDreams-Bold" size:22], NSFontAttributeName,nil];
+    NSDictionary *tabNTitleAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor grayColor], NSForegroundColorAttributeName,[UIFont fontWithName:@"Raleway-Bold" size:8], NSFontAttributeName,nil];
     
-    NSDictionary *tabNTitleAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor grayColor], NSForegroundColorAttributeName,[UIFont fontWithName:@"CaviarDreams-Bold" size:8], NSFontAttributeName,nil];
-    
-    NSDictionary *tabSTitleAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.000 green:0.478 blue:1.000 alpha:1.00], NSForegroundColorAttributeName,[UIFont fontWithName:@"CaviarDreams-Bold" size:8], NSFontAttributeName,nil];
+    NSDictionary *tabSTitleAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.000 green:0.478 blue:1.000 alpha:1.00], NSForegroundColorAttributeName,[UIFont fontWithName:@"Raleway-Bold" size:8], NSFontAttributeName,nil];
     
     [[UITabBarItem appearance] setTitleTextAttributes:tabNTitleAttributes forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:tabSTitleAttributes forState:UIControlStateSelected];
