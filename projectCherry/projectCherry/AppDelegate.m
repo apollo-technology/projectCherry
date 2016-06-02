@@ -23,6 +23,9 @@
         configuration.applicationId = @"fSZ6FAXqCKtpGNBT3DZBkdNPbxX4OeOu4K3dBE0L";
         configuration.clientKey = @"uN06yHaHLKHSyBk3aMJheuv6jXmD4FTiStNQPwjm";
         configuration.server = @"https://parseapi.back4app.com";
+        
+        
+        //wefiouhwefiouhjwefoijfewoijwefoijfew
     }]];
     
     return YES;
