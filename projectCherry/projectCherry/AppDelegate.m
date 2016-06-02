@@ -25,7 +25,7 @@
         configuration.server = @"https://parseapi.back4app.com";
         
         
-        //wefiouhwefiouhjwefoijfewoijwefoijfew
+        //wefiouhwefiouhjwefoijfewoijwefoijf
     }]];
     
     return YES;
