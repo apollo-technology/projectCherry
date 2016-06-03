@@ -10,8 +10,9 @@
 #import <MapKit/MapKit.h>
 #import "MapFilterView.h"
 
-@interface MapViewController : UIViewController <MKMapViewDelegate, MapFilterViewDelegate>
+@interface MapViewController : UIViewController <MKMapViewDelegate, MapFilterViewDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end

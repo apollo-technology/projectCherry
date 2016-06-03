@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E660F5E1D01D05500126519 /* ATPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E660F5D1D01D05500126519 /* ATPlace.m */; };
+		1E660F611D01D06900126519 /* ATPlaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E660F601D01D06900126519 /* ATPlaceController.m */; };
+		1E660F641D01D14800126519 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E660F631D01D14800126519 /* InitialViewController.m */; };
 		1E6C37441D00C68E00C44F22 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C37321D00C68E00C44F22 /* Raleway-Black.ttf */; };
 		1E6C37451D00C68E00C44F22 /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C37331D00C68E00C44F22 /* Raleway-BlackItalic.ttf */; };
 		1E6C37461D00C68E00C44F22 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C37341D00C68E00C44F22 /* Raleway-Bold.ttf */; };
@@ -27,6 +30,12 @@
 		1E6C37551D00C68E00C44F22 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C37431D00C68E00C44F22 /* Raleway-ThinItalic.ttf */; };
 		1E6C37581D00C95600C44F22 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C37571D00C95600C44F22 /* MapViewController.m */; };
 		1E6C375B1D00D6AC00C44F22 /* MapFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C375A1D00D6AC00C44F22 /* MapFilterView.m */; };
+		1E6C37611D00F2D500C44F22 /* DevelopersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C37601D00F2D500C44F22 /* DevelopersViewController.m */; };
+		1E6C37631D00F3BA00C44F22 /* corkBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C37621D00F3BA00C44F22 /* corkBackground.jpg */; };
+		1E6C376B1D00F91500C44F22 /* FontInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C37651D00F91500C44F22 /* FontInspector.m */; };
+		1E6C376C1D00F91500C44F22 /* ionicons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C37671D00F91500C44F22 /* ionicons.bundle */; };
+		1E6C376D1D00F91500C44F22 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C37691D00F91500C44F22 /* IonIcons.m */; };
+		1E6C376E1D00F91500C44F22 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C376A1D00F91500C44F22 /* ionicons.ttf */; };
 		1EB050CB1CFF7E4B0095254C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB050CA1CFF7E4B0095254C /* main.m */; };
 		1EB050CE1CFF7E4B0095254C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB050CD1CFF7E4B0095254C /* AppDelegate.m */; };
 		1EB050D61CFF7E4B0095254C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EB050D51CFF7E4B0095254C /* Assets.xcassets */; };
@@ -52,6 +61,7 @@
 		1EB0511E1CFF82AB0095254C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB051121CFF82AB0095254C /* AudioToolbox.framework */; };
 		1EB0511F1CFF82AB0095254C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB051131CFF82AB0095254C /* MessageUI.framework */; };
 		1EDF362E1D009857005930F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF362D1D009857005930F8 /* Main.storyboard */; };
+		1EF253341D01000C004EAFEB /* BusinessDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EF253331D01000C004EAFEB /* BusinessDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +82,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E660F5C1D01D05500126519 /* ATPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPlace.h; sourceTree = "<group>"; };
+		1E660F5D1D01D05500126519 /* ATPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPlace.m; sourceTree = "<group>"; };
+		1E660F5F1D01D06900126519 /* ATPlaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPlaceController.h; sourceTree = "<group>"; };
+		1E660F601D01D06900126519 /* ATPlaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPlaceController.m; sourceTree = "<group>"; };
+		1E660F621D01D14800126519 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		1E660F631D01D14800126519 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		1E6C37321D00C68E00C44F22 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
 		1E6C37331D00C68E00C44F22 /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
 		1E6C37341D00C68E00C44F22 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
@@ -94,6 +110,16 @@
 		1E6C37571D00C95600C44F22 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		1E6C37591D00D6AC00C44F22 /* MapFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapFilterView.h; sourceTree = "<group>"; };
 		1E6C375A1D00D6AC00C44F22 /* MapFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapFilterView.m; sourceTree = "<group>"; };
+		1E6C375F1D00F2D500C44F22 /* DevelopersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevelopersViewController.h; sourceTree = "<group>"; };
+		1E6C37601D00F2D500C44F22 /* DevelopersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevelopersViewController.m; sourceTree = "<group>"; };
+		1E6C37621D00F3BA00C44F22 /* corkBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = corkBackground.jpg; sourceTree = "<group>"; };
+		1E6C37641D00F91500C44F22 /* FontInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontInspector.h; sourceTree = "<group>"; };
+		1E6C37651D00F91500C44F22 /* FontInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontInspector.m; sourceTree = "<group>"; };
+		1E6C37661D00F91500C44F22 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
+		1E6C37671D00F91500C44F22 /* ionicons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ionicons.bundle; sourceTree = "<group>"; };
+		1E6C37681D00F91500C44F22 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
+		1E6C37691D00F91500C44F22 /* IonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonIcons.m; sourceTree = "<group>"; };
+		1E6C376A1D00F91500C44F22 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		1EB050C61CFF7E4B0095254C /* projectCherry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectCherry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB050CA1CFF7E4B0095254C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1EB050CC1CFF7E4B0095254C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,6 +152,8 @@
 		1EB051121CFF82AB0095254C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1EB051131CFF82AB0095254C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1EDF362D1D009857005930F8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1EF253321D01000C004EAFEB /* BusinessDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessDetailViewController.h; sourceTree = "<group>"; };
+		1EF253331D01000C004EAFEB /* BusinessDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +199,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E6C376F1D00F91900C44F22 /* IONICONS */ = {
+			isa = PBXGroup;
+			children = (
+				1E6C37641D00F91500C44F22 /* FontInspector.h */,
+				1E6C37651D00F91500C44F22 /* FontInspector.m */,
+				1E6C37661D00F91500C44F22 /* ionicons-codes.h */,
+				1E6C37671D00F91500C44F22 /* ionicons.bundle */,
+				1E6C37681D00F91500C44F22 /* IonIcons.h */,
+				1E6C37691D00F91500C44F22 /* IonIcons.m */,
+				1E6C376A1D00F91500C44F22 /* ionicons.ttf */,
+			);
+			name = IONICONS;
+			sourceTree = "<group>";
+		};
 		1EB050BD1CFF7E4B0095254C = {
 			isa = PBXGroup;
 			children = (
@@ -215,10 +257,21 @@
 				1EB050CC1CFF7E4B0095254C /* AppDelegate.h */,
 				1EB050CD1CFF7E4B0095254C /* AppDelegate.m */,
 				1EDF362D1D009857005930F8 /* Main.storyboard */,
+				1E6C376F1D00F91900C44F22 /* IONICONS */,
 				1E6C37591D00D6AC00C44F22 /* MapFilterView.h */,
 				1E6C375A1D00D6AC00C44F22 /* MapFilterView.m */,
+				1E660F5F1D01D06900126519 /* ATPlaceController.h */,
+				1E660F601D01D06900126519 /* ATPlaceController.m */,
+				1E660F5C1D01D05500126519 /* ATPlace.h */,
+				1E660F5D1D01D05500126519 /* ATPlace.m */,
+				1E660F621D01D14800126519 /* InitialViewController.h */,
+				1E660F631D01D14800126519 /* InitialViewController.m */,
 				1E6C37561D00C95600C44F22 /* MapViewController.h */,
 				1E6C37571D00C95600C44F22 /* MapViewController.m */,
+				1EF253321D01000C004EAFEB /* BusinessDetailViewController.h */,
+				1EF253331D01000C004EAFEB /* BusinessDetailViewController.m */,
+				1E6C375F1D00F2D500C44F22 /* DevelopersViewController.h */,
+				1E6C37601D00F2D500C44F22 /* DevelopersViewController.m */,
 				1EB050D51CFF7E4B0095254C /* Assets.xcassets */,
 				1EB050D71CFF7E4B0095254C /* LaunchScreen.storyboard */,
 				1EB050DA1CFF7E4B0095254C /* Info.plist */,
@@ -230,6 +283,7 @@
 		1EB050C91CFF7E4B0095254C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1E6C37621D00F3BA00C44F22 /* corkBackground.jpg */,
 				1E6C37321D00C68E00C44F22 /* Raleway-Black.ttf */,
 				1E6C37331D00C68E00C44F22 /* Raleway-BlackItalic.ttf */,
 				1E6C37341D00C68E00C44F22 /* Raleway-Bold.ttf */,
@@ -381,7 +435,9 @@
 				1E6C374B1D00C68E00C44F22 /* Raleway-ExtraLightItalic.ttf in Resources */,
 				1E6C37541D00C68E00C44F22 /* Raleway-Thin.ttf in Resources */,
 				1E6C374E1D00C68E00C44F22 /* Raleway-LightItalic.ttf in Resources */,
+				1E6C376C1D00F91500C44F22 /* ionicons.bundle in Resources */,
 				1E6C374A1D00C68E00C44F22 /* Raleway-ExtraLight.ttf in Resources */,
+				1E6C37631D00F3BA00C44F22 /* corkBackground.jpg in Resources */,
 				1E6C37461D00C68E00C44F22 /* Raleway-Bold.ttf in Resources */,
 				1EDF362E1D009857005930F8 /* Main.storyboard in Resources */,
 				1E6C374F1D00C68E00C44F22 /* Raleway-Medium.ttf in Resources */,
@@ -390,6 +446,7 @@
 				1E6C37471D00C68E00C44F22 /* Raleway-BoldItalic.ttf in Resources */,
 				1EB050D91CFF7E4B0095254C /* LaunchScreen.storyboard in Resources */,
 				1E6C37451D00C68E00C44F22 /* Raleway-BlackItalic.ttf in Resources */,
+				1E6C376E1D00F91500C44F22 /* ionicons.ttf in Resources */,
 				1E6C374D1D00C68E00C44F22 /* Raleway-Light.ttf in Resources */,
 				1EB050D61CFF7E4B0095254C /* Assets.xcassets in Resources */,
 				1E6C37501D00C68E00C44F22 /* Raleway-MediumItalic.ttf in Resources */,
@@ -419,10 +476,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E6C37611D00F2D500C44F22 /* DevelopersViewController.m in Sources */,
+				1E6C376D1D00F91500C44F22 /* IonIcons.m in Sources */,
 				1E6C37581D00C95600C44F22 /* MapViewController.m in Sources */,
+				1E6C376B1D00F91500C44F22 /* FontInspector.m in Sources */,
 				1E6C375B1D00D6AC00C44F22 /* MapFilterView.m in Sources */,
 				1EB050CE1CFF7E4B0095254C /* AppDelegate.m in Sources */,
 				1EB050CB1CFF7E4B0095254C /* main.m in Sources */,
+				1EF253341D01000C004EAFEB /* BusinessDetailViewController.m in Sources */,
+				1E660F641D01D14800126519 /* InitialViewController.m in Sources */,
+				1E660F5E1D01D05500126519 /* ATPlace.m in Sources */,
+				1E660F611D01D06900126519 /* ATPlaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

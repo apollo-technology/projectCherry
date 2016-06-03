@@ -30,7 +30,7 @@
     cardView.layer.shadowOpacity = 0.8;
     pickerTable.allowsMultipleSelection = YES;
 
-    pickableContent = @[@"1",@"2"];
+    pickableContent = @[@"Restaraunt",@"Hotel",@"Restroom",@"Drinking Fountain",@"Park",@"Beach",@"Groceries",@"Merchandise Store",@"Movie Theatre",@"ATM",@"Bank",@"Post Office Mailbox",@"Gov Buildings"];
     pickedContent = [NSMutableArray new];
 }
 

@@ -41,7 +41,7 @@
 }
 
 -(void)mapFilterFinishedPickingWithOptions:(NSArray *)options{
-    NSLog(@"options:\n%@",options);
+    
 }
 
 - (void)viewDidLoad {
@@ -51,44 +51,64 @@
     
     self.mapView.delegate = self;
     
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    [self.locationManager startUpdatingLocation];
+    
+    CLAuthorizationStatus authorizationStatus= [CLLocationManager authorizationStatus];
+    
+    if (authorizationStatus == kCLAuthorizationStatusAuthorizedAlways || authorizationStatus == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        [self.locationManager startUpdatingLocation];
+        self.mapView.showsUserLocation = YES;
+        
+    }
+    
+    
     MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc] init];
     myAnnotation.coordinate = CLLocationCoordinate2DMake(44.763693, -85.620771);
     myAnnotation.title = @"Matthews Pizza";
     myAnnotation.subtitle = @"Best Pizza in Town";
     [self.mapView addAnnotation:myAnnotation];
+    [self.mapView setShowsPointsOfInterest:NO];
 }
 
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    NSLog(@"%@",view.annotation.title);
-    NSLog(@"%@",view.annotation.subtitle);
+    NSString *title, *subtitle;
+    title = view.annotation.title;
+    subtitle = view.annotation.subtitle;
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     // If it's the user location, just return nil.
-    if ([annotation isKindOfClass:[MKUserLocation class]])
+    if ([annotation isKindOfClass:[MKUserLocation class]]){
         return nil;
-    
-    // Handle any custom annotations.
-    if ([annotation isKindOfClass:[MKPointAnnotation class]])
-    {
-        // Try to dequeue an existing pin view first.
-        MKPinAnnotationView *pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"CustomPinAnnotationView"];
-        if (!pinView)
-        {
-            // If an existing pin view was not available, create one.
-            pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPinAnnotationView"];
-            pinView.animatesDrop = YES;
-            pinView.canShowCallout = YES;
-            
-            UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
-            pinView.rightCalloutAccessoryView = rightButton;
+    } else {
+        // Handle any custom annotations.
+        if ([annotation isKindOfClass:[MKPointAnnotation class]]){
+            // Try to dequeue an existing pin view first.
+            MKPinAnnotationView *pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ew"];
+            if (!pinView)
+            {
+                // If an existing pin view was not available, create one.
+                pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ew"];
+                pinView.animatesDrop = YES;
+                pinView.canShowCallout = YES;
+                
+                UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+                pinView.rightCalloutAccessoryView = rightButton;
+            } else {
+                pinView.annotation = annotation;
+                pinView.annotation = nil;
+            }
+            return pinView;
         } else {
-            pinView.annotation = annotation;
+            return nil;
         }
-        return pinView;
     }
-    return nil;
 }
 
 
