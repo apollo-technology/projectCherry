@@ -37,7 +37,7 @@ NSString *const apiKey = @"AIzaSyAvX_Pof2gULtyNUcTXdWb-QLOALQNEqrw";
     } else {
         //error getting data
     }
-}
+}//
 
 +(void)getPlaceForLocation:(NSArray *)location completion:(void (^)(ATPlace *place))completionHandler{
     
