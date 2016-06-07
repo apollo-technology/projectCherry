@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E660F5E1D01D05500126519 /* ATPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E660F5D1D01D05500126519 /* ATPlace.m */; };
-		1E660F611D01D06900126519 /* ATPlaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E660F601D01D06900126519 /* ATPlaceController.m */; };
 		1E660F641D01D14800126519 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E660F631D01D14800126519 /* InitialViewController.m */; };
 		1E6C37441D00C68E00C44F22 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C37321D00C68E00C44F22 /* Raleway-Black.ttf */; };
 		1E6C37451D00C68E00C44F22 /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C37331D00C68E00C44F22 /* Raleway-BlackItalic.ttf */; };
@@ -82,10 +80,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E660F5C1D01D05500126519 /* ATPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPlace.h; sourceTree = "<group>"; };
-		1E660F5D1D01D05500126519 /* ATPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPlace.m; sourceTree = "<group>"; };
-		1E660F5F1D01D06900126519 /* ATPlaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPlaceController.h; sourceTree = "<group>"; };
-		1E660F601D01D06900126519 /* ATPlaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPlaceController.m; sourceTree = "<group>"; };
 		1E660F621D01D14800126519 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
 		1E660F631D01D14800126519 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		1E6C37321D00C68E00C44F22 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
@@ -199,6 +193,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E410EA61D07437E008BCA43 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1E6C37561D00C95600C44F22 /* MapViewController.h */,
+				1E6C37571D00C95600C44F22 /* MapViewController.m */,
+				1E6C37591D00D6AC00C44F22 /* MapFilterView.h */,
+				1E6C375A1D00D6AC00C44F22 /* MapFilterView.m */,
+				1EF253321D01000C004EAFEB /* BusinessDetailViewController.h */,
+				1EF253331D01000C004EAFEB /* BusinessDetailViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		1E410EA71D07438A008BCA43 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				1E6C375F1D00F2D500C44F22 /* DevelopersViewController.h */,
+				1E6C37601D00F2D500C44F22 /* DevelopersViewController.m */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
 		1E6C376F1D00F91900C44F22 /* IONICONS */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,24 +270,14 @@
 		1EB050C81CFF7E4B0095254C /* projectCherry */ = {
 			isa = PBXGroup;
 			children = (
+				1E6C376F1D00F91900C44F22 /* IONICONS */,
 				1EB050CC1CFF7E4B0095254C /* AppDelegate.h */,
 				1EB050CD1CFF7E4B0095254C /* AppDelegate.m */,
 				1EDF362D1D009857005930F8 /* Main.storyboard */,
-				1E6C376F1D00F91900C44F22 /* IONICONS */,
-				1E6C37591D00D6AC00C44F22 /* MapFilterView.h */,
-				1E6C375A1D00D6AC00C44F22 /* MapFilterView.m */,
-				1E660F5F1D01D06900126519 /* ATPlaceController.h */,
-				1E660F601D01D06900126519 /* ATPlaceController.m */,
-				1E660F5C1D01D05500126519 /* ATPlace.h */,
-				1E660F5D1D01D05500126519 /* ATPlace.m */,
 				1E660F621D01D14800126519 /* InitialViewController.h */,
 				1E660F631D01D14800126519 /* InitialViewController.m */,
-				1E6C37561D00C95600C44F22 /* MapViewController.h */,
-				1E6C37571D00C95600C44F22 /* MapViewController.m */,
-				1EF253321D01000C004EAFEB /* BusinessDetailViewController.h */,
-				1EF253331D01000C004EAFEB /* BusinessDetailViewController.m */,
-				1E6C375F1D00F2D500C44F22 /* DevelopersViewController.h */,
-				1E6C37601D00F2D500C44F22 /* DevelopersViewController.m */,
+				1E410EA61D07437E008BCA43 /* Map */,
+				1E410EA71D07438A008BCA43 /* More */,
 				1EB050D51CFF7E4B0095254C /* Assets.xcassets */,
 				1EB050D71CFF7E4B0095254C /* LaunchScreen.storyboard */,
 				1EB050DA1CFF7E4B0095254C /* Info.plist */,
@@ -485,8 +491,6 @@
 				1EB050CB1CFF7E4B0095254C /* main.m in Sources */,
 				1EF253341D01000C004EAFEB /* BusinessDetailViewController.m in Sources */,
 				1E660F641D01D14800126519 /* InitialViewController.m in Sources */,
-				1E660F5E1D01D05500126519 /* ATPlace.m in Sources */,
-				1E660F611D01D06900126519 /* ATPlaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

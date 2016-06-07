@@ -15,10 +15,5 @@
 
 @implementation InitialViewController
 
--(void)viewDidAppear:(BOOL)animated{
-    [ATPlaceController getPlaces:^(BOOL succeeded) {
-        [self performSegueWithIdentifier:@"home" sender:nil];
-    }];
-}
 
 @end

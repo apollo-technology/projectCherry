@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0u9-11-abU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mIw-nC-UGu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -204,6 +204,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F51-gT-noh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2754" y="186"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sp0-wX-rss">
+            <objects>
+                <viewController id="mIw-nC-UGu" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hFo-J4-dXQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fsf-uV-9x9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xmz-AA-fYe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8R-S5-LP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4798" y="12"/>
         </scene>
         <!--Search-->
         <scene sceneID="EuJ-kQ-LF1">
@@ -523,7 +541,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-1t-IMn">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-1t-IMn">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <connections>
                                     <outlet property="delegate" destination="er1-dD-Dwl" id="LwN-sP-dfO"/>
@@ -552,28 +570,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUh-fP-jSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2014" y="-939"/>
-        </scene>
-        <!--Initial View Controller-->
-        <scene sceneID="QKx-yO-BqL">
-            <objects>
-                <viewController id="0u9-11-abU" customClass="InitialViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Web-Wq-Ovg"/>
-                        <viewControllerLayoutGuide type="bottom" id="6R0-rH-axd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nG9-6e-jFg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <segue destination="6La-99-du5" kind="presentation" identifier="home" modalTransitionStyle="flipHorizontal" id="Hzh-RQ-kOK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7gk-9Z-fO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="846" y="475"/>
         </scene>
         <!--Map-->
         <scene sceneID="c36-h0-1KN">

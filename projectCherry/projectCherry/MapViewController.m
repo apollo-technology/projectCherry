@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "MapFilterView.h"
+#import "ATPlaceController.h"
 
 @interface MapViewController (){
     
@@ -50,6 +51,8 @@
     [self loadMapZoom];
     
     self.mapView.delegate = self;
+    
+    [ATPlaceController initTheMa];
     
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
