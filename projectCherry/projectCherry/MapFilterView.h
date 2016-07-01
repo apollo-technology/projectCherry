@@ -12,7 +12,7 @@
 
 @protocol MapFilterViewDelegate <NSObject>
 
--(void)mapFilterFinishedPickingWithOptions:(NSArray *)options;
+-(void)mapFilterFinishedPickingWithOptions:(int)options;
 
 @end
 

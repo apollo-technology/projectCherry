@@ -8,10 +8,15 @@
 
 #import "MapViewController.h"
 #import "MapFilterView.h"
-#import "ATPlaceController.h"
+#import <Parse/Parse.h>
+#import "CollectionViewCell.h"
+#import "PCController.h"
+#import "PlaceViewController.h"
 
 @interface MapViewController (){
-    
+    IBOutlet UIToolbar *cancelBar;
+    IBOutlet UIBarButtonItem *filterButton;
+    IBOutlet UIView *filterView;
 }
 
 @end
@@ -31,17 +36,47 @@
     
 }
 
--(IBAction)filterView:(id)sender{
-    MapFilterView *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"mapFilterView"];
-    popUp.delegate = self;
-    popUp.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    popUp.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self presentViewController:popUp animated:YES completion:^{
-        
+-(IBAction)filterButtonAction:(id)sender{
+    [UIView animateWithDuration:0.5 animations:^{
+        filterView.alpha = 1;
+    } completion:^(BOOL finished) {
+        _mapView.userInteractionEnabled = NO;
+        filterButton.enabled = NO;
     }];
 }
 
--(void)mapFilterFinishedPickingWithOptions:(NSArray *)options{
+-(IBAction)cancelButtonAction:(id)sender{
+    [UIView animateWithDuration:0.5 animations:^{
+        filterView.alpha = 0;
+    } completion:^(BOOL finished) {
+        _mapView.userInteractionEnabled = YES;
+        filterButton.enabled = YES;
+    }];
+}
+
+#pragma mark <UICollectionViewDataSource>
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 24;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    
+    // Configure the cell
+    cell.layer.cornerRadius = 30.5;
+    cell.layer.borderColor = [[UIColor colorWithRed:0.953 green:0.953 blue:0.953 alpha:1.00] CGColor];
+    cell.layer.borderWidth = 1;
+    cell.iconImage.image = [UIImage imageNamed:@"back1.jpg"];
+    return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
 }
 
@@ -50,9 +85,12 @@
     // Do any additional setup after loading the view.
     [self loadMapZoom];
     
+    
     self.mapView.delegate = self;
     
-    [ATPlaceController initTheMa];
+    filterView.alpha = 0;
+    
+    cancelBar.layer.borderColor = [[UIColor colorWithRed:0.953 green:0.953 blue:0.953 alpha:1.00] CGColor];
     
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
@@ -68,20 +106,33 @@
         self.mapView.showsUserLocation = YES;
         
     }
-    
+    [self.mapView setShowsPointsOfInterest:NO];
     
     MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc] init];
-    myAnnotation.coordinate = CLLocationCoordinate2DMake(44.763693, -85.620771);
-    myAnnotation.title = @"Matthews Pizza";
-    myAnnotation.subtitle = @"Best Pizza in Town";
+    myAnnotation.coordinate = CLLocationCoordinate2DMake(44.7256083, -85.6392635);
+    myAnnotation.title = @"Jackson Hewitt Tax Service";
+    myAnnotation.subtitle = @"accounting";
     [self.mapView addAnnotation:myAnnotation];
-    [self.mapView setShowsPointsOfInterest:NO];
 }
 
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     NSString *title, *subtitle;
     title = view.annotation.title;
     subtitle = view.annotation.subtitle;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Finding Place...\n\n\n" preferredStyle:UIAlertControllerStyleAlert];
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    spinner.center = CGPointMake(130.5, 80);
+    spinner.color = [UIColor grayColor];
+    [spinner startAnimating];
+    [alert.view addSubview:spinner];
+    [self presentViewController:alert animated:YES completion:^{
+        [mapView deselectAnnotation:view.annotation animated:YES];
+        PFQuery *query = [PFQuery queryWithClassName:@"places"];
+        [query whereKey:@"name" equalTo:title];
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+            NSLog(@"%@",object);
+        }];
+    }];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation

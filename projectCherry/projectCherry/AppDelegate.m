@@ -8,15 +8,13 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "PCBusinessManager.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
-//hey buddy!!!!
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -36,6 +34,9 @@
     [[UITabBarItem appearance] setTitleTextAttributes:tabNTitleAttributes forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:tabSTitleAttributes forState:UIControlStateSelected];
     [[UINavigationBar appearance] setTitleTextAttributes:navTitleAttributes];
+    
+    
+    [PCBusinessManager setBusinessId:@"NV6"];
     
     return YES;
 }

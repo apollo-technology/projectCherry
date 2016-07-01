@@ -7,7 +7,6 @@
 //
 
 #import "InitialViewController.h"
-#import "ATPlaceController.h"
 
 @interface InitialViewController ()
 

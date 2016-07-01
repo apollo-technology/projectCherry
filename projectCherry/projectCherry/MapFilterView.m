@@ -12,7 +12,7 @@
     IBOutlet UIView *cardView;
     IBOutlet UITableView *pickerTable;
     NSArray *pickableContent;
-    NSMutableArray *pickedContent;
+    int pickedIndex;
 }
 
 @end
@@ -28,15 +28,16 @@
     cardView.layer.shadowOffset = CGSizeMake(-10, 30);
     cardView.layer.shadowRadius = 10;
     cardView.layer.shadowOpacity = 0.8;
-    pickerTable.allowsMultipleSelection = YES;
+    //pickerTable.allowsMultipleSelection = YES;
 
     pickableContent = @[@"Restaraunt",@"Hotel",@"Restroom",@"Drinking Fountain",@"Park",@"Beach",@"Groceries",@"Merchandise Store",@"Movie Theatre",@"ATM",@"Bank",@"Post Office Mailbox",@"Gov Buildings"];
-    pickedContent = [NSMutableArray new];
+    
+    pickedIndex = 69;
 }
 
 -(IBAction)done:(id)sender{
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.delegate mapFilterFinishedPickingWithOptions:pickedContent];
+        [self.delegate mapFilterFinishedPickingWithOptions:pickedIndex];
     }];
 }
 
@@ -55,7 +56,7 @@
     UITableViewCell *tableViewCell = [tableView cellForRowAtIndexPath:indexPath];
     // if you don't use a custom image then
     tableViewCell.accessoryType = UITableViewCellAccessoryCheckmark;
-    [pickedContent addObject:[pickableContent objectAtIndex:indexPath.row]];
+    pickedIndex = (int)indexPath.row;
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -63,7 +64,7 @@
     UITableViewCell *tableViewCell = [tableView cellForRowAtIndexPath:indexPath];
     // if you don't use a custom image then
     tableViewCell.accessoryType = UITableViewCellAccessoryNone;
-    [pickedContent removeObject:[pickableContent objectAtIndex:indexPath.row]];
+    pickedIndex = 69;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -72,6 +73,10 @@
     // Configure the cell...
     cell.textLabel.text = pickableContent[indexPath.row];
     cell.textLabel.font = [UIFont fontWithName:@"Raleway-Regular" size:17];
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    if (pickedIndex == (int)indexPath.row) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
     return cell;
 }
 
